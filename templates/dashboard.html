@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Report</title>
+</head>
+<body style="font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #1a1a1a; color: #f0f0f0;">
+
+    <header style="background-color: #ff6600; color: black; padding: 20px 0; text-align: center; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);">
+        <h1 style="margin: 0; font-size: 2.5em; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);">Daily Report</h1>
+    </header>
+
+    <main style="padding: 20px; text-align: center;">
+
+        <div class="image-container" style="margin: 20px auto; max-width: 600px;">
+            <img src="{{ url_for('static', filename='images/fin.png') }}" 
+                alt="Dashboard Image" 
+                style="width: 100%; height: auto; border: 2px solid #ff6600; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);">
+        </div>
+
+        <div style="margin-top: 30px; text-align: left; max-width: 800px; margin-left: auto; margin-right: auto;">
+            <h2 style="text-align: center; color: #ff6600; text-decoration: underline;">Key Metrics</h2>
+            <ul style="list-style: none; padding: 0;">
+                <li style="margin: 10px 0; font-size: 1.2em;"><strong>Total Reviews:</strong> {{ total_reviews }}</li>
+                <li style="margin: 10px 0; font-size: 1.2em;"><strong>Positive Percent:</strong> {{ positive_reviews / total_reviews * 100.00 }}%</li>
+                <li style="margin: 10px 0; font-size: 1.2em;"><strong>Negative Percent:</strong> {{ negative_reviews / total_reviews * 100.00 }}%</li>
+            </ul>
+        </div>
+
+    </main>
+
+</body>
+</html>

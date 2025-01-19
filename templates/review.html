@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit Your Review</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #000;
+            color: #FFA500;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .review-form {
+            background-color: #333;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(255, 165, 0, 0.7);
+            width: 100%;
+            max-width: 400px;
+        }
+        .review-form h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #FFA500;
+        }
+        .review-form label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        .review-form textarea,
+        .review-form select,
+        .review-form button {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            border: none;
+            border-radius: 5px;
+        }
+        .review-form textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+        .review-form select {
+            background-color: #222;
+            color: #FFA500;
+        }
+        .review-form button {
+            background-color: #FFA500;
+            color: #000;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .review-form button:hover {
+            background-color: #ff8c00;
+        }
+    </style>
+</head>
+<body>
+    <form class="review-form" action="/submit-review" method="POST">
+        <h1>Submit Your Review</h1>
+        <label for="review">Your Review</label>
+        <textarea id="review" name="review" placeholder="Write your review here..." required></textarea>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
